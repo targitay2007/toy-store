@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 1,
             name: "Конструктор «Крепость»",
-            image: "images/toy-fortress.jpg",
+            image: "images/toy-fortress.png",
             price: 2999,
             rating: 4.8,
             badge: "Хит",
