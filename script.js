@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 1,
             name: "Конструктор «Крепость»",
-            image: "https://via.placeholder.com/300x300/FF6B6B/FFFFFF?text=Конструктор",
+            image: "images/toy-fortress.jpg",
             price: 2999,
             rating: 4.8,
             badge: "Хит",
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 2,
             name: "Набор для творчества «Радужные краски»",
-            image: "https://via.placeholder.com/300x300/4ECDC4/FFFFFF?text=Краски",
+            image: "images/toy-paints.png",
             price: 1499,
             rating: 4.5,
             badge: "Новинка",
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 3,
             name: "Мягкий медведь-плюш",
-            image: "https://via.placeholder.com/300x300/FF9F1C/FFFFFF?text=Медведь",
+            image: "images/toy-bear.png",
             price: 1999,
             rating: 5.0,
             badge: "Популярное",
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 4,
             name: "Научный набор «Маленький учёный»",
-            image: "https://via.placeholder.com/300x300/2A9D8F/FFFFFF?text=Набор",
+            image: "images/toy-science.png",
             price: 3499,
             rating: 4.7,
             badge: "Образовательное",
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 5,
             name: "Радиоуправляемая машинка",
-            image: "https://via.placeholder.com/300x300/E76F51/FFFFFF?text=Машинка",
+            image: "images/toy-car.png",
             price: 4999,
             rating: 4.6,
             badge: "Скорость",
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 6,
             name: "Набор магнитных плиток",
-            image: "https://via.placeholder.com/300x300/264653/FFFFFF?text=Плитки",
+            image: "images/toy-tiles.png",
             price: 2799,
             rating: 4.4,
             badge: "Тренд",

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://targitay2007.github.io/toy-store/sitemap.xml
