@@ -19,7 +19,7 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <i class="fas fa-tshirt"></i>
+                <i class="fas fa-puzzle-piece"></i>
                 <span>Игрушечный Рай</span>
             </div>
             <nav class="nav">
@@ -36,6 +36,7 @@
                 <span class="cart-count">0</span>
             </div>
             <a href="tel:+74951234567" class="header-phone"><i class="fas fa-phone"></i> +7 (495) 123-45-67</a>
+            <div class="burger-menu"><i class="fas fa-bars"></i></div>
         </div>
     </header>
 
@@ -91,6 +92,7 @@
         <div class="container">
             <h2 class="section-title">Наши хиты продаж</h2>
             <p class="section-subtitle">Лучшие игрушки, которые уже полюбили дети</p>
+            <div id="productFilters"></div>
             <div class="product-grid" id="productGrid">
                 <!-- Products will be loaded here by JavaScript -->
             </div>
@@ -103,7 +105,7 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>О нашем магазине</h2>
-                    <p>Мы — команда enthusiasts, которые верят, что игра — это важнейшая часть детства. Наша миссия — предоставлять высококачественные, безопасные и вдохновляющие игрушки, которые помогают детям расти, узнавать мир и развивать свой потенциал.</p>
+                    <p>Мы — команда энтузиастов, которые верят, что игра — это важнейшая часть детства. Наша миссия — предоставлять высококачественные, безопасные и вдохновляющие игрушки, которые помогают детям расти, узнавать мир и развивать свой потенциал.</p>
                     <p>Каждая игрушка в нашем каталоге проходит тщательный отбор: мы проверяем материалы, проверяем прочность и убеждаемся, что она приносит радость и пользу. От деревянных конструкторов до интерактивных электронных наборов — у нас есть всё для счастливого детства.</p>
                     <div class="about-stats">
                         <div class="stat">
@@ -121,7 +123,7 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://via.placeholder.com/400x300/FF6B6B/FFFFFF?text=Игрушечный+Рай" alt="Наш магазин" class="about-img">
+                    <img src="https://via.placeholder.com/400x300/FF6B6B/FFFFFF?text=Игрушечный+Рай" alt="Наш магазин" class="about-img" loading="lazy">
                 </div>
             </div>
         </div>
@@ -154,6 +156,19 @@
             <h2>Готовы сделать ребёнка счастливым?</h2>
             <p>Закажите сейчас и получите бесплатную доставку по России при заказе от 2000 руб.</p>
             <a href="#products" class="btn-primary">Купить сейчас</a>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter" id="contact">
+        <div class="container">
+            <h2 class="section-title">Подпишитесь на наши новости</h2>
+            <p class="section-subtitle">Будьте в курсе новинок и акций</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Ваш email" required>
+                <button type="submit" class="btn-primary">Подписаться</button>
+            </form>
+            <p class="legal-note">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>.</p>
         </div>
     </section>
 
@@ -198,41 +213,27 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Игрушечный Рай. Все права защищены.</p>
+                <p class="legal"><a href="#">Политика конфиденциальности</a> | Используя сайт, вы соглашаетесь на обработку данных.</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
-    <!-- Product Quick View Modal -->
+<!-- Product Quick View Modal -->
 <div class="modal" id="productModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="productModalLabel">Быстрый просмотр товара</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="" id="modalProductImage" class="img-fluid rounded" alt="Product image">
-                    </div>
-                    <div class="col-md-6">
-                        <h3 id="modalProductTitle"></h3>
-                        <div class="rating" id="modalProductRating"></div>
-                        <p class="price" id="modalProductPrice"></p>
-                        <p id="modalProductDescription">Описание продукта будет здесь...</p>
-                        <div class="mt-4">
-                            <button type="button" class="btn btn-outline me-2">
-                                <i class="fas fa-eye"></i> Подробнее
-                            </button>
-                            <button type="button" class="btn btn-primary">
-                                <i class="fas fa-shopping-cart"></i> В корзину
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="modal-content">
+    <span class="close-btn" aria-label="Close">&times;</span>
+    <div class="modal-body">
+      <img src="" id="modalProductImage" alt="Product image">
+      <h3 id="modalProductTitle"></h3>
+      <div id="modalProductRating"></div>
+      <p id="modalProductPrice"></p>
+      <p id="modalProductDescription">Описание продукта будет здесь...</p>
+      <div class="modal-actions">
+        <button type="button" class="btn-secondary"><i class="fas fa-eye"></i> Подробнее</button>
+        <button type="button" class="btn-primary"><i class="fas fa-shopping-cart"></i> В корзину</button>
+      </div>
     </div>
+  </div>
 </div>
 </body></html>

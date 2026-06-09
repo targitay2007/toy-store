@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
             productCard.innerHTML = `
                 <div class="product-badge">${product.badge}</div>
                 <div class="product-image">
-                    <img src="${product.image}" alt="${product.name}">
+                    <img src="${product.image}" alt="${product.name}" loading="lazy">
                     <div class="product-overlay">
                         <button class="btn-outline view-btn" data-id="${product.id}"><i class="fas fa-eye"></i> Посмотреть</button>
                         <button class="btn-primary add-to-cart" data-id="${product.id}"><i class="fas fa-shopping-cart"></i> В корзину</button>
