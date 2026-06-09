@@ -155,5 +155,42 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert('Функция просмотра товара в разработке.');
             });
         });
+
+    // Modal functionality
+    const modal = document.getElementById('productModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalImg = document.getElementById('modalImg');
+    const modalPrice = document.getElementById('modalPrice');
+    const modalRating = document.getElementById('modalRating');
+    const modalBadge = document.getElementById('modalBadge');
+    const closeBtn = document.querySelector('.close-btn');
+
+    // Open modal when product card is clicked
+    document.addEventListener('click', function(e) {
+        const card = e.target.closest('.product-card');
+        if (card) {
+            const productName = card.querySelector('h3').textContent;
+            const product = products.find(p => p.name === productName);
+            if (product) {
+                modalTitle.textContent = product.name;
+                modalImg.src = product.image;
+                modalImg.alt = product.name;
+                modalPrice.textContent = product.price.toLocaleString() + ' &#8381;';
+                modalRating.textContent = product.rating;
+                modalBadge.textContent = product.badge;
+                modal.style.display = 'block';
+            }
+        }
+    });
+
+    // Close modal when clicking on X or outside content
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
     }
 });
